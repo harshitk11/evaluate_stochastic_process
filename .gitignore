@@ -3,4 +3,4 @@ save/
 artifacts/
 dump/
 test.ipynb
-resources/
+/resources/**/*.zip

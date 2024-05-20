@@ -4,3 +4,4 @@ artifacts/
 dump/
 test.ipynb
 /resources/**/*.zip
+.DS_Store

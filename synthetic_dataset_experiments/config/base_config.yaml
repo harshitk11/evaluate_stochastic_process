@@ -1,0 +1,95 @@
+dataloader:
+  train_val_split: [0.7,0.3]
+  device: 'cuda:0'  # or 'cpu'
+  seed: 42
+  train_batch_size: 4 # #videos in a batch
+  test_batch_size: 4 # #videos in a batch
+  num_workers: 6
+  chunk_params:
+    chunk_size: 60   # Number of time steps in a chunk=num_observed+num_predicted
+  image_spatial_size: [65,65] # (height,width)
+
+experiment_setting:
+  experiment_name: null
+  logs: False
+  chunk_params:
+    num_observed: 10
+    num_predicted: 50
+  train:
+    epochs: 100
+    dataset_name: "density72_p_100_uniform"    # For training the model
+    
+    # Modify for pretraining
+    resume: False
+    checkpoint_path: null
+    load_only_model: False
+
+    multiscale:
+      use: True
+      scales: [1,2,4,8] 
+      loss_calculation_scales: [1] # scales to be used for loss calculation
+      input_channels: 16 # same as output_channels of the base model
+      output_channels: 1
+      learned_multiscale_weights: False
+      custom:
+        use: False
+        weights: null
+      model_prediction_pooling: "max" # "max","avg","min"
+      
+    optimizer:
+      lr: 0.001
+    scheduler:
+      gamma: 0.95
+
+  evaluation:
+    dataset_name: "density72_p_100_uniform"    # For evaluating the model
+    eval_only: False
+    model_weights_path: null
+    multiscale:
+      use: True
+      scales: [1,2,4,8] 
+      loss_calculation_scales: [1] # scales to be used for loss calculation
+ 
+model:
+  name: "d_convlstm" # "d_convlstm","depth_convlstm_multiscale"
+  d_convLSTM: 
+    Encoder:
+      in_channels: 3
+      out_channels: 16
+      kernel_size: 3
+    Decoder:
+      in_channels: 16
+      out_channels: 1
+      kernel_size: 1
+    ConvLSTM:
+      in_channels: 16
+      hidden_channels: 16
+      output_channels: 16
+      num_layers: 1
+    
+    bottleneck_factor: 1
+    EncoderBottleneck:
+      in_channels: 3
+      out_channels: 16
+      kernel_size: 3
+    DecoderBottleneck:
+      in_channels: 16
+      out_channels: 16
+      kernel_size: 3
+    
+
+  d_convLSTM_MS: 
+    Encoder:
+      in_channels: 3
+      out_channels: 16
+      kernel_size: 3
+    Decoder:
+      in_channels: 16
+      out_channels: 1
+      kernel_size: 1
+    ConvLSTM:
+      in_channels: 16
+      hidden_channels: 16
+      output_channels: 16
+      pooling_type: "max" # "max","avg", "none" | If none, then no downsampling is done
+      

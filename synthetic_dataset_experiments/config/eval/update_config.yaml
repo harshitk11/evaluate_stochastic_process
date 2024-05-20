@@ -1,0 +1,12 @@
+dataloader:
+  device: cuda:0
+  test_batch_size: 1
+experiment_setting:
+  evaluation:
+    dataset_name: density72_p_80_uniform
+    eval_only: true
+    model_weights_path: ./artifacts/8_pyramid_v2_bottleneckStudy__d72_p80_b4_train_1_eval_1
+  experiment_name: evalDiffInitSlevel80_8_pyramid_v2_bottleneckStudy__d72_p80_b4_train_1_eval_1
+  logs: true
+  train:
+    load_only_model: true

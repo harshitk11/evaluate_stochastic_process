@@ -1,0 +1,28 @@
+experiment_setting:
+  evaluation:
+    dataset_name: density72_p_80_uniform
+    multiscale:
+      loss_calculation_scales:
+      - 1
+  experiment_name: arnca__d72_p80_b1_train_1_eval_1
+  logs: true
+  train:
+    checkpoint_path: 'null'
+    dataset_name: density72_p_80_uniform
+    load_only_model: false
+    multiscale:
+      learned_multiscale_weights: false
+      loss_calculation_scales:
+      - 1
+    resume: true
+model:
+  d_convLSTM:
+    bottleneck_factor: 1
+  d_convLSTM_MS:
+    ConvLSTM:
+      layer_scales:
+      - 1
+      - 1
+      pooling_type: none
+    bottleneck_factor: 1
+  name: arnca

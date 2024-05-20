@@ -1,0 +1,10 @@
+dataloader:
+  device: cuda:0
+experiment_setting:
+  evaluation:
+    eval_only: true
+    model_weights_path: ./artifacts/segmentation_model_300epochs_MC_run10__bottleneckTrue_kernelSize3_bottleneckChannel16
+  experiment_name: eval_ECE_segmentation_model_300epochs_MC_run10__bottleneckTrue_kernelSize3_bottleneckChannel16
+  logs: false
+  train:
+    load_only_model: true

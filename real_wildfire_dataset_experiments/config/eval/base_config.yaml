@@ -1,0 +1,106 @@
+dataloader:
+  chunk_params:
+    chunk_size: 1
+  device: cuda:0
+  image_spatial_size:
+  - 65
+  - 65
+  num_workers: 6
+  seed: 42
+  test_batch_size: 4
+  train_batch_size: 4
+  train_val_split:
+  - 0.7
+  - 0.3
+experiment_setting:
+  chunk_params:
+    num_observed: 1
+    num_predicted: 0
+  evaluation:
+    dataset_name: density72_p_100_uniform
+    eval_only: false
+    model_weights_path: null
+    multiscale:
+      loss_calculation_scales:
+      - 1
+      scales:
+      - 1
+      - 2
+      - 4
+      - 8
+      use: true
+  experiment_name: segmentation_model_300epochs_MC_run10__bottleneckTrue_kernelSize3_bottleneckChannel16
+  logs: true
+  train:
+    checkpoint_path: 'null'
+    dataset_name: density72_p_100_uniform
+    epochs: 300
+    load_only_model: false
+    multiscale:
+      custom:
+        use: false
+        weights: null
+      input_channels: 16
+      learned_multiscale_weights: false
+      loss_calculation_scales:
+      - 1
+      model_prediction_pooling: max
+      output_channels: 1
+      scales:
+      - 1
+      - 2
+      - 4
+      - 8
+      use: true
+    optimizer:
+      lr: 0.0001
+    resume: false
+    scheduler:
+      gamma: 0.99
+    weight_for_minority_class: 3
+model:
+  d_convLSTM:
+    ConvLSTM:
+      hidden_channels: 16
+      in_channels: 16
+      num_layers: 1
+      output_channels: 16
+    Decoder:
+      in_channels: 16
+      kernel_size: 1
+      out_channels: 1
+    DecoderBottleneck:
+      in_channels: 16
+      kernel_size: 3
+      out_channels: 16
+    Encoder:
+      in_channels: 12
+      kernel_size: 3
+      out_channels: 16
+    EncoderBottleneck:
+      in_channels: 3
+      kernel_size: 3
+      out_channels: 16
+    bottleneck_factor: 1
+  d_convLSTM_MS:
+    ConvLSTM:
+      hidden_channels: 16
+      in_channels: 16
+      layer_scales:
+      - 1
+      - 2
+      output_channels: 16
+      pooling_type: max
+    Decoder:
+      in_channels: 16
+      kernel_size: 1
+      out_channels: 1
+    Encoder:
+      in_channels: 12
+      kernel_size: 3
+      out_channels: 16
+  name: segmentation_model
+  segmentation_model:
+    bottleneck_channel: 16
+    conv_kernel_size: 3
+    use_bottleneck: true

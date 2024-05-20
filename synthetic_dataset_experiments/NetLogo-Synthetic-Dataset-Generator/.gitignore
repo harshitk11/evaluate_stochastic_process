@@ -1,0 +1,6 @@
+pynetlogo_env/
+activate_conda_environment.txt
+test_images/
+__pycache__/
+res/
+images/

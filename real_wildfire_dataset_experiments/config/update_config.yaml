@@ -1,0 +1,17 @@
+experiment_setting:
+  experiment_name: segmentation_model_300epochs_MC_run29_DC_filteredTrue__bottleneckTrue_kernelSize3_bottleneckChannel16
+  input_filtering:
+    dc_threshold: 0.1
+    use: true
+  logs: true
+  train:
+    checkpoint_path: 'null'
+    load_only_model: false
+    resume: false
+    weight_for_minority_class: 3
+model:
+  name: segmentation_model
+  segmentation_model:
+    bottleneck_channel: 16
+    conv_kernel_size: 3
+    use_bottleneck: true

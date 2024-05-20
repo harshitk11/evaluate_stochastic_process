@@ -1,0 +1,110 @@
+dataloader:
+  chunk_params:
+    chunk_size: 60
+  device: cuda:1
+  image_spatial_size:
+  - 65
+  - 65
+  num_workers: 6
+  seed: 42
+  test_batch_size: 4
+  train_batch_size: 4
+  train_val_split:
+  - 0.7
+  - 0.3
+experiment_setting:
+  chunk_params:
+    num_observed: 10
+    num_predicted: 50
+  evaluation:
+    dataset_name: density72_p_80_uniform
+    eval_only: false
+    model_weights_path: null
+    multiscale:
+      loss_calculation_scales:
+      - 1
+      scales:
+      - 1
+      - 2
+      - 4
+      - 8
+      use: true
+  experiment_name: 8_pyramid_v2_bottleneckStudy__d72_p80_b4_train_1_eval_1
+  logs: true
+  train:
+    checkpoint_path: 'null'
+    dataset_name: density72_p_80_uniform
+    epochs: 100
+    load_only_model: false
+    multiscale:
+      custom:
+        use: false
+        weights: null
+      input_channels: 16
+      learned_multiscale_weights: false
+      loss_calculation_scales:
+      - 1
+      model_prediction_pooling: max
+      output_channels: 1
+      scales:
+      - 1
+      - 2
+      - 4
+      - 8
+      use: true
+    optimizer:
+      lr: 0.001
+    resume: false
+    scheduler:
+      gamma: 0.95
+model:
+  d_convLSTM:
+    ConvLSTM:
+      hidden_channels: 16
+      in_channels: 16
+      num_layers: 1
+      output_channels: 16
+    Decoder:
+      in_channels: 16
+      kernel_size: 1
+      out_channels: 1
+    DecoderBottleneck:
+      in_channels: 16
+      kernel_size: 3
+      out_channels: 16
+    Encoder:
+      in_channels: 3
+      kernel_size: 3
+      out_channels: 16
+    EncoderBottleneck:
+      in_channels: 3
+      kernel_size: 3
+      out_channels: 16
+    bottleneck_factor: 4
+  d_convLSTM_MS:
+    ConvLSTM:
+      hidden_channels: 16
+      in_channels: 16
+      layer_scales:
+      - 1
+      - 2
+      output_channels: 16
+      pooling_type: max
+    Decoder:
+      in_channels: 16
+      kernel_size: 1
+      out_channels: 1
+    DecoderBottleneck:
+      in_channels: 16
+      kernel_size: 3
+      out_channels: 16
+    Encoder:
+      in_channels: 3
+      kernel_size: 3
+      out_channels: 16
+    EncoderBottleneck:
+      in_channels: 3
+      kernel_size: 3
+      out_channels: 16
+    bottleneck_factor: 4
+  name: d_convlstm

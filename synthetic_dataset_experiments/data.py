@@ -193,12 +193,6 @@ def get_dataloader(config):
     def _get_root_directory(dataset_name):
         """Retrieve the root directory for the given dataset name."""
         root_directory_mapping = {
-            "density76_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density/uniform_76",
-            "density74_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density/uniform_74",
-            "density72_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density/uniform_72",
-            "density70_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density/uniform_70",
-            "density68_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density/uniform_68",
-        
             "density72_p_100_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_stochastic/uniform_72_p_0",
             "density72_p_95_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_stochastic/uniform_72_p_95",
             "density72_p_90_uniform": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_stochastic/uniform_72_p_9",
@@ -210,14 +204,6 @@ def get_dataloader(config):
             "density72_p_90_sameInit_1": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_same_init/uniform_72_p_9",
             "density72_p_85_sameInit_1": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_same_init/uniform_72_p_85",
             "density72_p_80_sameInit_1": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_same_init/uniform_72_p_8",
-            
-            "density64_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_64_p_0",
-            "density66_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_66_p_0",
-            "density68_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_68_p_0",
-            "density70_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_70_p_0",
-            "density72_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_72_p_0",
-            "density74_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_74_p_0",
-            "density76_p_100_diffDen": "/ssd_2tb/hkumar64/datasets/netlogo_simulations/uniform_density_deterministic/uniform_76_p_0",
             
         }
         if dataset_name not in root_directory_mapping:

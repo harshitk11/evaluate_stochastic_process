@@ -1,6 +1,6 @@
 """
 Code used to generate the results that support the claim that DNNs are learning to 
-predict the statistic-GT (Figure 4 and Figure 10).
+predict the statistic-GT (Figure 10 and Figure 11).
 """
 
 import pickle

@@ -2,7 +2,7 @@
 
 This repository contains code to model the evolution of forest fires using the NetLogo multi-agent modelling framework.
 
-To run the [code](netlogo_models/forest_fire_evolution.nlogo), you'll need the [NetLogo agent](http://ccl.northwestern.edu/netlogo/models/community/Agent-Based%20Model). You can also get a high-level description of the model from [this image](fire_evolution_dynamics_explained.PNG).
+To run the [NetLogo Forest Fire model](netlogo_models/forest_fire_evolution.nlogo), you'll need the [NetLogo agent](http://ccl.northwestern.edu/netlogo/models/community/Agent-Based%20Model). You can also get a high-level description of the model from [this image](fire_evolution_dynamics_explained.PNG).
 
 For generating the dataset from scratch and/or to visualize the results reported in Figure 3 of the paper (characterization of forest fire as a stochastic process), please see [pyNetLogo_script.py](pyNetLogo_script.py)
 

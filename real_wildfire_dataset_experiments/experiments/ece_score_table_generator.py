@@ -1,3 +1,7 @@
+"""
+Used for creating Table 1 and Table 2 in the paper.
+"""
+
 # Generates the table of scores for the next day wildfire dataset for the paper
 from baseline_vs_proposed_score_compare import get_scores_from_json
 from baseline_vs_proposed_score_compare import MC_Score_Plotter_stochasticity_stratified

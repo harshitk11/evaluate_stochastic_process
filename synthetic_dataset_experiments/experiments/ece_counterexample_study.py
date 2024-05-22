@@ -1,6 +1,6 @@
 """
 Code used to generate the plot showing the long horizon predictions of convLSTM-CA using the different evaluation metrics
-(Figure 6 and Figure 13 of the paper)
+(Figure 6 and Figure 14 of the paper)
 """
 
 from reliability_analysis import load_raw_pred_forecastGT_dict

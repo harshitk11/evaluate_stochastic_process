@@ -1,6 +1,6 @@
 """
 Code used to generate the evolution of evaluation metrics with the number of samples for different stochasticity levels
-(Figure 14)
+(Figure 15)
 """
 
 from reliability_analysis import load_raw_pred_forecastGT_dict, raw_pred_forecastGT_dict

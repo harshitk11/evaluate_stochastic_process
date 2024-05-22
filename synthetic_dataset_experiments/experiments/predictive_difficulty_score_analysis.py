@@ -1,7 +1,7 @@
 
 """
 Code used to generate the plot showing the standard deviation of the performance scores with respect to the VarZt
-(Figure 11 of the paper)
+(Figure 12 of the paper)
 """
 
 # Script to generate all the plots with respect to the predictive difficulty scoreßß

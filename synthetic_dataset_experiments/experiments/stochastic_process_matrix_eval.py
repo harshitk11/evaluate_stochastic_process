@@ -1,6 +1,6 @@
 """
 Code used to generate the matrix of heatmaps showing the performance of the DNNs trained on different stochasticity levels
-(Figure 5 and Figure 12 of the paper)
+(Figure 5 and Figure 13 of the paper)
 """
 
 from ece_counterexample_study import metric_vs_time_combined_simulation

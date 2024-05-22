@@ -1,3 +1,6 @@
+"""
+Used for creating Figure 4 in the paper
+"""
 import pyNetLogo
 import pandas as pd
 import matplotlib.pyplot as plt

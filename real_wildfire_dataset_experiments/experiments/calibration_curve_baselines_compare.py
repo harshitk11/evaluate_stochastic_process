@@ -1,3 +1,6 @@
+"""
+Used for creating Figure 16 in the paper
+"""
 from ece_score_table_generator import combine_samples_based_on_stochasticity_bins, convert_bskBaselineOutput_to_stochasticityDict_format, create_score_stochasticity_dict
 from sklearn.calibration import calibration_curve
 import matplotlib.pyplot as plt

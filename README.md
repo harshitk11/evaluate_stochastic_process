@@ -1,6 +1,6 @@
-# Synthetic Forest Fire and Real World Wildfire Experiments
+# Synthetic Dataset and Real World Wildfire Experiments
 
-This repository contains the code for experiments and the data generation process for both synthetic forest fire datasets and real world wildfire datasets.
+This repository contains the code for experiments and the data generation process for synthetic datasets (with a focus on the forest fire dataset). While the data generation processes for the host-pathogen and stock market models are similar, they are not included in this repository. Additionally, the repository includes experiments using real-world wildfire datasets.
 
 ## Repository Components
 
@@ -19,18 +19,19 @@ Below are the links to the code used for generating the results presented in var
 
 ### Synthetic Forest Fire Data
 
-- **Figure 4**: [Code](synthetic_dataset_experiments/NetLogo-Synthetic-Dataset-Generator/pyNetLogo_script.py)
-- **Figures 5, 13**: [Code](synthetic_dataset_experiments/experiments/stochastic_process_matrix_eval.py)
-- **Figures 6, 14**: [Code](synthetic_dataset_experiments/experiments/ece_counterexample_study.py)
-- **Figures 10, 11**: [Code](synthetic_dataset_experiments/experiments/reliability_analysis.py)
-- **Figure 12**: [Code](synthetic_dataset_experiments/experiments/predictive_difficulty_score_analysis.py)
-- **Figure 15**: [Code](synthetic_dataset_experiments/experiments/metric_evolution_vs_num_samples.py)
-- **Figure 6 (inset), 17**: [Code](synthetic_dataset_experiments/experiments/calibration_curve_instant.py)
+- **Figures 3, 19, 20, 21**: [Code](synthetic_dataset_experiments/experiments/stochastic_process_matrix_eval.py)
+- **Figures 4, 22**: [Code](synthetic_dataset_experiments/experiments/ece_counterexample_study.py)
+- **Figures 12, 13**: [Code](synthetic_dataset_experiments/experiments/reliability_analysis.py)
+- **Figure 15**: [Code](synthetic_dataset_experiments/NetLogo-Synthetic-Dataset-Generator/pyNetLogo_script.py)
+- **Figure 16**: [Code](synthetic_dataset_experiments/experiments/metric_vs_varzt.py)
+- **Figure 17, 23**: [Code](synthetic_dataset_experiments/experiments/metric_evolution_vs_num_samples.py)
+- **Figure 18, 22 (inset)**: [Code](synthetic_dataset_experiments/experiments/calibration_curve_instant.py)
+
 
 ### Real World Wildfire Data
 
-- **Figure 16**: [Code](real_wildfire_dataset_experiments/experiments/calibration_curve_baselines_compare.py)
-- **Tables 1, 2**: [Code](real_wildfire_dataset_experiments/experiments/ece_score_table_generator.py)
+- **Figure 24**: [Code](real_wildfire_dataset_experiments/experiments/calibration_curve_baselines_compare.py)
+- **Tables 2, 7**: [Code](real_wildfire_dataset_experiments/experiments/ece_score_table_generator.py)
 
 ## Directory Structure
 
@@ -44,6 +45,7 @@ Below are the links to the code used for generating the results presented in var
     - `ece_counterexample_study.py`
     - `reliability_analysis.py`
     - `predictive_difficulty_score_analysis.py`
+    - `metric_vs_varzt.py`
     - `metric_evolution_vs_num_samples.py`
     - `calibration_curve_instant.py`
 

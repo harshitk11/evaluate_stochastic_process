@@ -1,6 +1,8 @@
 # Synthetic Dataset and Real World Wildfire Experiments
 
-This repository contains the code for experiments and the data generation process for synthetic datasets (with a focus on the forest fire dataset). While the data generation processes for the host-pathogen and stock market models are similar, they are not included in this repository. Additionally, the repository includes experiments using real-world wildfire datasets.
+This repository accompanies the paper “Has the Deep Neural Network Learned the Stochastic Process? An Evaluation Viewpoint,” which will be presented at ICLR 2025. You can access the paper on [OpenReview](https://openreview.net/forum?id=2U8owdruSQ).
+
+It contains the code for experiments and the data generation process for synthetic datasets, with a primary focus on the forest fire dataset. The data generation processes for the host-pathogen and stock market models are similar to that of the forest fire dataset but are not provided in this repository. The repository also includes experiments conducted on real-world wildfire datasets.
 
 ## Repository Components
 
